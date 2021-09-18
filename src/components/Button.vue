@@ -1,5 +1,5 @@
 <template>
-    <button class="btn btn-primary" v-on:click="buttonClick">
+    <button class="btn btn-primary" v-on:click="buttonClick(dataButton.label)">
         {{ label }}
     </button>
 </template>
@@ -12,9 +12,12 @@ export default {
             label: 'Click me!' // Default value
         }
     },
+    props: {
+        dataButton: Object
+    },
     methods: {
-        buttonClick: function () {
-            this.label = 'Click Event'
+        buttonClick: function (label) {
+            this.label = label;
         }
     }
 }

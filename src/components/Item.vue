@@ -1,6 +1,6 @@
 <template>
     <li class="nav-item" v-bind:class="{ active: dataItem.current }">
-        <a class="nav-link" v-bind:style="{ color: randomColor }" :href="dataItem.url">{{ dataItem.title }}</a>
+        <a class="nav-link" v-bind:style="{ color: randomColor }" v-bind:href="dataItem.url">{{ dataItem.title }}</a>
     </li>
 </template>
 

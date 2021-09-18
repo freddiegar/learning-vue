@@ -1,7 +1,7 @@
 <!-- View -->
 <template>
     <div>
-        <h1>Events Javascript from Vue</h1>
+        <h1>One Way Binding</h1>
     </div>
 </template>
 
