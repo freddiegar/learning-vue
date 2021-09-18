@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div v-for="index in 5" v-bind:key="index">
+        div number: {{ index }}
+    </div>
     <!-- Tag syntax -->
     <Demo />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Demo from './components/Demo.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Demo
   }
 }

@@ -1,12 +1,20 @@
 <!-- View -->
 <template>
     <div>
-        <h1>Hello {{ persons[0].name }} {{ persons[0].surname }}</h1>
-        <!-- This is javascript -->
-        <p>9 + 3 = {{ 9 + 3 }}</p>
-        <p>{{ 'Con' + 'cat' }}</p>
-        <p>{{ persons[0].title }}</p>
-        <p v-html="persons[0].title"></p>
+        <h1>Loops</h1>
+
+        <p>Simple</p>
+        <ol>
+            <li v-for="number in numbers" v-bind:key="number">{{ number }}</li>
+        </ol>
+
+        <p>Object</p>
+        <ul>
+            <li v-for="person in persons" v-bind:key="person">
+                Name: {{ person.surname }}, {{ person.name }} |
+                Title: {{ person.title }}
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -16,11 +24,26 @@
         name: 'Demo',
         data () {
             return {
+                numbers: [
+                    'one',
+                    'two',
+                    'three'
+                ],
                 persons: [
                     {
                         name: "Freddie",
                         surname: "Gar",
                         title: "<strike>Developer</strike>"
+                    },
+                    {
+                        name: "Jon",
+                        surname: "Doe",
+                        title: "<strike>QA</strike>"
+                    },
+                    {
+                        name: "Jone",
+                        surname: "Doe",
+                        title: "<strike>Manager</strike>"
                     }
                 ]
             }
