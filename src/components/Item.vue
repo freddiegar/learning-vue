@@ -1,6 +1,6 @@
 <template>
     <li class="nav-item" v-bind:class="{ active: isCurrent }" v-bind:style="{ backgroundColor: randomColor }">
-        <a class="nav-link" href="#">{{ title }}</a>
+        <a class="nav-link" :href="dataItem.url">{{ dataItem.title }}</a>
     </li>
 </template>
 
@@ -14,7 +14,7 @@ export default {
         }
     },
     props: {
-        title: String
+        dataItem: Object
     }
 }
 </script>

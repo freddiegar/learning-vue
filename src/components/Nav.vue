@@ -1,8 +1,8 @@
 <template>
     <ul class="nav">
-        <Item title="Home"/>
-        <Item title="About Us"/>
-        <Item title="Contact"/>
+        <Item v-bind:dataItem="{ title:'Home', url:'/home' }" />
+        <Item v-bind:dataItem="{ title:'About Us', url:'/about-us' }" />
+        <Item v-bind:dataItem="{ title:'Contact', url:'/contact' }" />
     </ul>
 </template>
 
