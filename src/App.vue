@@ -12,6 +12,10 @@
         <div class="row">
             <Demo />
         </div>
+
+        <div class="row">
+            <Card v-bind:dataCard="{ title: 'One' }" />
+        </div>
     </div>
   </div>
 </template>
@@ -19,12 +23,14 @@
 <script>
 import Nav from './components/Nav.vue'
 import Demo from './components/Demo.vue'
+import Card from './components/Card.vue'
 
 export default {
   name: 'App',
   components: {
     Nav,
-    Demo
+    Demo,
+    Card
   }
 }
 </script>

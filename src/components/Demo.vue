@@ -1,7 +1,7 @@
 <!-- View -->
 <template>
     <div>
-        <h1>Props as Object using Loops</h1>
+        <h1>Events Javascript from Vue</h1>
     </div>
 </template>
 
