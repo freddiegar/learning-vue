@@ -1,12 +1,12 @@
 <!-- View -->
 <template>
     <div>
-        <h1>Hello {{ person.name }} {{ person.surname }}</h1>
+        <h1>Hello {{ persons[0].name }} {{ persons[0].surname }}</h1>
         <!-- This is javascript -->
         <p>9 + 3 = {{ 9 + 3 }}</p>
         <p>{{ 'Con' + 'cat' }}</p>
-        <p>{{ person.title }}</p>
-        <p v-html="person.title"></p>
+        <p>{{ persons[0].title }}</p>
+        <p v-html="persons[0].title"></p>
     </div>
 </template>
 
@@ -16,11 +16,13 @@
         name: 'Demo',
         data () {
             return {
-                person: {
-                    name: "Freddie",
-                    surname: "Gar",
-                    title: "<strike>Developer</strike>"
-                }
+                persons: [
+                    {
+                        name: "Freddie",
+                        surname: "Gar",
+                        title: "<strike>Developer</strike>"
+                    }
+                ]
             }
         }
     }
