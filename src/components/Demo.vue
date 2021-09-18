@@ -1,12 +1,9 @@
 <!-- View -->
 <template>
     <div>
-        <h1>Hide Elements</h1>
+        <h1>Style Scopes</h1>
 
-        <p>A paragraph is hidden using v-show</p>
-        <p v-show="(Math.random() * 10).toFixed() % 2 === 0">
-            Show paragraph
-        </p>
+        <p class="paragraph">A .paragraph class has style global</p>
     </div>
 </template>
 
@@ -23,5 +20,7 @@
 
 <!-- Styles -->
 <style>
-
+.paragraph {
+    background-color: lightgray;
+}
 </style>

@@ -9,7 +9,11 @@
         <li class="nav-item" v-bind:style="{ backgroundColor: randomColorAlt, border: 'solid 3px' }">
             <a class="nav-link" href="#">Contact</a>
         </li>
+        <li class="nav-item">
+            <p class="paragraph">This .paragraph class has style scoped</p>
+        </li>
     </ul>
+
 </template>
 
 <script>
@@ -24,3 +28,9 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.paragraph {
+    background-color: gray;
+}
+</style>
