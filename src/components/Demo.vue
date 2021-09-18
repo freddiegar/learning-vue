@@ -1,9 +1,7 @@
 <!-- View -->
 <template>
     <div>
-        <h1>Style Scopes</h1>
-
-        <p class="paragraph">A .paragraph class has style global</p>
+        <h1>Props Simples</h1>
     </div>
 </template>
 
@@ -20,7 +18,4 @@
 
 <!-- Styles -->
 <style>
-.paragraph {
-    background-color: lightgray;
-}
 </style>
