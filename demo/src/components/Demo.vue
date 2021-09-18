@@ -1,20 +1,17 @@
 <!-- View -->
 <template>
     <div>
-        <h1>Loops</h1>
+        <h1>Conditionals</h1>
 
-        <p>Simple</p>
-        <ol>
-            <li v-for="number in numbers" v-bind:key="number">{{ number }}</li>
-        </ol>
-
-        <p>Object</p>
-        <ul>
-            <li v-for="person in persons" v-bind:key="person">
-                Name: {{ person.surname }}, {{ person.name }} |
-                Title: {{ person.title }}
-            </li>
-        </ul>
+        <p v-if="persons[Math.floor(Math.random() * persons.length)].name !== 'Freddie'">
+            Hello!
+        </p>
+        <p v-else-if="(Math.random() * 10).toFixed() % 3 === 0">
+            You have luck, see you later!
+        </p>
+        <p v-else>
+            Bye!
+        </p>
     </div>
 </template>
 
@@ -24,11 +21,6 @@
         name: 'Demo',
         data () {
             return {
-                numbers: [
-                    'one',
-                    'two',
-                    'three'
-                ],
                 persons: [
                     {
                         name: "Freddie",
