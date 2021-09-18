@@ -1,6 +1,6 @@
 <template>
     <ul class="nav">
-        <Item v-bind:dataItem="item" v-for="item in items" v-bind:key="item" />
+        <Item v-bind:dataItem="item" v-for="(item, index) in items" :key="index" />
     </ul>
 </template>
 

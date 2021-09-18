@@ -14,20 +14,17 @@
             </p>
 
             <p>
-                Hi {{ inputMessage }}!
-            </p>
-
-            <p>
-                <strike>v-bind: Only affect instances of var in one way, change value in input, NO change value in paragrah.</strike>
-            </p>
-
-            <p>
-                v-model: Affect instances of var in two ways, change value in input, CHANGE value in paragrah.
+                {{ inputMessage }}!
             </p>
         </div>
 
         <div class="card-footer">
-            <button class="btn btn-secondary mr-3" v-on:click="inputMessage = 'Freddie'">
+            <button class="btn btn-secondary mr-3"
+                @click="inputMessage = 'Hi'"
+                @mouseover="inputMessage = 'Welcome :D'"
+                @mouseleave="inputMessage = 'Bye ;('"
+                @dblclick="inputMessage = 'Surprise :0'"
+                >
                 I'm not a component
             </button>
 

@@ -1,7 +1,7 @@
 <!-- View -->
 <template>
     <div>
-        <h1>One Way Binding</h1>
+        <h1>Events and more events</h1>
     </div>
 </template>
 
