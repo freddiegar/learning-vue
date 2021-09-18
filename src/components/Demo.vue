@@ -1,7 +1,7 @@
 <!-- View -->
 <template>
     <div>
-        <h1>Props as Object</h1>
+        <h1>Props as Object using Loops</h1>
     </div>
 </template>
 

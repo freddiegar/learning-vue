@@ -1,8 +1,6 @@
 <template>
     <ul class="nav">
-        <Item v-bind:dataItem="{ title:'Home', url:'/home' }" />
-        <Item v-bind:dataItem="{ title:'About Us', url:'/about-us' }" />
-        <Item v-bind:dataItem="{ title:'Contact', url:'/contact' }" />
+        <Item v-bind:dataItem="item" v-for="item in items" v-bind:key="item" />
     </ul>
 </template>
 
@@ -16,6 +14,12 @@ export default {
     },
     data() {
         return {
+            items: [
+                { title:'Home', url:'/home', current: true },
+                { title:'About Us', url:'/about-us' },
+                { title:'Contact', url:'/contact' },
+                { title:'Maps', url:'/maps' },
+            ]
         }
     },
 }
