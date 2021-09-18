@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <!-- Tag syntax -->
-    <Demo />
+    <div class="container">
+        <div class="row">
+            <Nav />
+        </div>
+
+        <div class="row">
+            <img alt="Vue logo" src="./assets/logo.png" style="max-width: 100px;">
+        </div>
+
+        <div class="row">
+            <Demo />
+        </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Nav from './components/Nav.vue'
 import Demo from './components/Demo.vue'
 
 export default {
   name: 'App',
   components: {
+    Nav,
     Demo
   }
 }
